@@ -1,0 +1,10 @@
+# Archivos generados por el compilador
+*.o
+*.exe
+*.out
+
+# Archivos de log
+*.log
+
+# Carpetas de Eclipse
+.settings/
