@@ -8,3 +8,4 @@
 
 # Carpetas de Eclipse
 .settings/
+.vscode/c_cpp_properties.json
