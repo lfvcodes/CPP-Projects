@@ -1,4 +1,7 @@
-# C++ Projects Portfolio / Portafolio de Proyectos en C++
+
+   
+
+# <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=cpp&perline=15" /></a>   Projects Portfolio / Portafolio de Proyectos en C++
 
 Welcome to my personal C++ projects portfolio! In this repository, you will find a collection of various C++ projects that demonstrate my skills and expertise in software development. Each project reflects my approach to problem-solving and programming.
 
