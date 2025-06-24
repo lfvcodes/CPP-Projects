@@ -9,7 +9,9 @@ https://github.com/lfvcodes/CPP-Projects
 #include <string>
 #include <sstream>
 #include <vector>
-#include <algorithm>
+#include <algorithm> // Required for std::transform, std::replace, std::reverse
+#include <cctype>    // Required for std::isdigit
+#include <limits>    // Required for std::numeric_limits
 
 using namespace std;
 
@@ -62,6 +64,12 @@ string trim(string text) {
 // generateRandomNumber - Generates a random number within a range.
 // generarNumeroAleatorio - Genera un número aleatorio dentro de un rango.
 int generateRandomNumber(int min, int max) {
+    // Seed the random number generator if not already seeded (only once per program execution)
+    static bool seeded = false;
+    if (!seeded) {
+        srand(static_cast<unsigned int>(time(0)));
+        seeded = true;
+    }
     return min + rand() % (max - min + 1);
 }
 
@@ -82,4 +90,50 @@ vector<string> splitString(string text, char delimiter) {
 string replaceCharacter(string text, char searchChar, char replaceChar) {
     replace(text.begin(), text.end(), searchChar, replaceChar);
     return text;
+}
+
+// startsWith - Checks if a string begins with a given prefix.
+// comienzaCon - Verifica si una cadena comienza con un prefijo dado.
+bool startsWith(const string& text, const string& prefix) {
+    return text.size() >= prefix.size() && text.compare(0, prefix.size(), prefix) == 0;
+}
+
+// endsWith - Checks if a string ends with a given suffix.
+// terminaCon - Verifica si una cadena termina con un sufijo dado.
+bool endsWith(const string& text, const string& suffix) {
+    return text.size() >= suffix.size() && text.compare(text.size() - suffix.size(), suffix.size(), suffix) == 0;
+}
+
+// containsString - Checks if a string contains another substring.
+// contieneCadena - Comprueba si una cadena contiene otra subcadena.
+bool containsString(const string& text, const string& subString) {
+    return text.find(subString) != string::npos;
+}
+
+// reverseString - Reverses a string.
+// invertirCadena - Invierte una cadena de texto.
+string reverseString(string text) {
+    reverse(text.begin(), text.end());
+    return text;
+}
+
+// isNumber - Checks if a string represents a valid number.
+// esNumero - Verifica si una cadena representa un número válido.
+bool isNumber(const string& text) {
+    if (text.empty()) {
+        return false;
+    }
+    for (char c : text) {
+        if (!isdigit(c)) {
+            return false;
+        }
+    }
+    return true;
+}
+
+// clamp - Limits a value within a specified range.
+// limitarValor - Limita un valor dentro de un rango específico.
+template <typename T>
+T clamp(T value, T low, T high) {
+    return max(low, min(value, high));
 }
