@@ -440,4 +440,87 @@ void initAsciiArt(map<char, vector<string> > &asciiArt)
   z.push_back(" z    ");
   z.push_back("zzzzz ");
   asciiArt['z'] = z;
+
+  // Agregar esto al final de tu función initAsciiArt, antes de la llave de cierre
+
+  // Números 0-9
+  vector<string> zero;
+  zero.push_back(" 0000 ");
+  zero.push_back("0    0");
+  zero.push_back("0    0");
+  zero.push_back("0    0");
+  zero.push_back(" 0000 ");
+  asciiArt['0'] = zero;
+
+  vector<string> one;
+  one.push_back("  11  ");
+  one.push_back(" 111  ");
+  one.push_back("  11  ");
+  one.push_back("  11  ");
+  one.push_back(" 1111 ");
+  asciiArt['1'] = one;
+
+  vector<string> two;
+  two.push_back(" 2222 ");
+  two.push_back("2    2");
+  two.push_back("   22 ");
+  two.push_back(" 22   ");
+  two.push_back("222222");
+  asciiArt['2'] = two;
+
+  vector<string> three;
+  three.push_back(" 3333 ");
+  three.push_back("3    3");
+  three.push_back("   33 ");
+  three.push_back("3    3");
+  three.push_back(" 3333 ");
+  asciiArt['3'] = three;
+
+  vector<string> four;
+  four.push_back("4   4 ");
+  four.push_back("4   4 ");
+  four.push_back("44444 ");
+  four.push_back("    4 ");
+  four.push_back("    4 ");
+  asciiArt['4'] = four;
+
+  vector<string> five;
+  five.push_back("55555 ");
+  five.push_back("5     ");
+  five.push_back("5555  ");
+  five.push_back("    5 ");
+  five.push_back("5555  ");
+  asciiArt['5'] = five;
+
+  vector<string> six;
+  six.push_back(" 6666 ");
+  six.push_back("6     ");
+  six.push_back("6666  ");
+  six.push_back("6    6");
+  six.push_back(" 6666 ");
+  asciiArt['6'] = six;
+
+  vector<string> seven;
+  seven.push_back("77777 ");
+  seven.push_back("    7 ");
+  seven.push_back("   7  ");
+  seven.push_back("  7   ");
+  seven.push_back(" 7    ");
+  asciiArt['7'] = seven;
+
+  vector<string> eight;
+  eight.push_back(" 8888 ");
+  eight.push_back("8    8");
+  eight.push_back(" 8888 ");
+  eight.push_back("8    8");
+  eight.push_back(" 8888 ");
+  asciiArt['8'] = eight;
+
+  vector<string> nine;
+  nine.push_back(" 9999 ");
+  nine.push_back("9    9");
+  nine.push_back(" 9999 ");
+  nine.push_back("    9 ");
+  nine.push_back(" 999  ");
+  asciiArt['9'] = nine;
 }
